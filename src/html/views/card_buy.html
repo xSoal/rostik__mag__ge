@@ -1,0 +1,164 @@
+<% var data = {
+title: "Заголовок | Проект",
+author: "Harrix"
+}; %>
+
+
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="cabinet__overflow">
+    <div class="w100">
+        <h2 class="h2">Личный кабинет</h2>
+
+        <div class="cabinet__columns">
+            <div>
+                <aside class="cabinet__leftAside">
+
+                    <nav class="cabinet__cabinetMenu cabinetMenu">
+                        <ul>
+                            <li class="cabinetMenu__item ">
+                                <a href="/">
+                                    Личные данные
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item cabinetMenu__item-active">
+                                <a href="/card_buy.html">
+                                    Корзина покупки
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Корзина продажи
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Мои заказы
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Мои продажи
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Просмотренные товары
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </aside>
+            </div>
+
+            <section class="cabinet__content">
+                <h2 class="h2">Ваши устройства</h2>
+                <div class="cardItems__cont">
+                    <div class="cardItem__cont">
+                        <div class="cardItem__image" style="background-image: url(/images/iphone.png);">
+                        </div>
+                        <div class="cardItem__description">
+                            <div class="cardItem__header">Apple iPhone X 128GB White</div>
+                            <div class="cardItem__tags">
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Нет симлока</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Использовалось</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Работает исправно</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Экран без повреждений</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Много царапин на корпусе</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Кабель в комплекте</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Блок питания в комплекте</span></label>
+                            </div>
+                        </div>
+                        <div class="cardItem__aside">
+                            <!--
+                                TODO на сколько я знаю, при использовании, как минимум, $, считается правильным ставить значек до цены
+                                типа $499, а не 499$
+                                *** дизайнер использовал 499$
+                            -->
+                            <div class="cardItem__price">$499</div>
+                            <div class="cardItem__delete"></div>
+                        </div>
+                    </div>
+                    <div class="cardItem__cont">
+                        <div class="cardItem__image" style="background-image: url(/images/iphone.png);">
+                        </div>
+                        <div class="cardItem__description">
+                            <div class="cardItem__header">Apple iPhone X 128GB White</div>
+                            <div class="cardItem__tags">
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Нет симлока</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Использовалось</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Работает исправно</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Экран без повреждений</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Много царапин на корпусе</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Кабель в комплекте</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Блок питания в комплекте</span></label>
+                            </div>
+                        </div>
+                        <div class="cardItem__aside">
+                            <!--
+                                TODO на сколько я знаю, при использовании, как минимум, $, считается правильным ставить значек до цены
+                                типа $499, а не 499$
+                                *** дизайнер использовал 499$
+                            -->
+                            <div class="cardItem__price">$499</div>
+                            <div class="cardItem__delete"></div>
+                        </div>
+                    </div>
+                    <div class="cardItem__cont">
+                        <div class="cardItem__image" style="background-image: url(/images/iphone.png);">
+                        </div>
+                        <div class="cardItem__description">
+                            <div class="cardItem__header">Apple iPhone X 128GB White</div>
+                            <div class="cardItem__tags">
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Нет симлока</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Использовалось</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Работает исправно</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Экран без повреждений</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Много царапин на корпусе</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Кабель в комплекте</span></label>
+                                <label class="cardItem__tag"><input class="cartItem__chekbox" type="checkbox"><span>Блок питания в комплекте</span></label>
+                            </div>
+                        </div>
+                        <div class="cardItem__aside">
+                            <!--
+                                TODO на сколько я знаю, при использовании, как минимум, $, считается правильным ставить значек до цены
+                                типа $499, а не 499$
+                                *** дизайнер использовал 499$
+                            -->
+                            <div class="cardItem__price">$499</div>
+                            <div class="cardItem__delete"></div>
+                        </div>
+                    </div>
+
+                    <button class="cardItem__addMore">
+                        Добавить ещё устройства
+                    </button>
+
+            </section>
+            <aside class="cabinet__rightAside">
+                <div class="cabinet__cabinetUserMenu userMenu">
+                    <div class="userMenu__leftLine"></div>
+                    <div class="userMenu__items">
+                        <div class="userMenu__item userMenu__item-active">
+                            <a href="/">Назад</a>
+                        </div>
+                        <div class="userMenu__item">
+                            <a href="#">Изменить пароль</a>
+                        </div>
+                        <div class="userMenu__item">
+                            <a href="#">Выход</a>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+</div>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

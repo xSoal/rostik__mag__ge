@@ -1,0 +1,184 @@
+<% var data = {
+title: "Заголовок | Проект",
+author: "Harrix"
+}; %>
+
+
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+
+<div class="cabinet__overflow">
+    <div class="w100">
+        <h2 class="h2">Личный кабинет</h2>
+
+        <div class="cabinet__columns">
+            <div>
+                <aside class="cabinet__leftAside">
+
+                    <nav class="cabinet__cabinetMenu cabinetMenu">
+                        <ul>
+                            <li class="cabinetMenu__item cabinetMenu__item-active">
+                                <a href="/">
+                                    Личные данные
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="/card_buy.html">
+                                    Корзина покупки
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Корзина продажи
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Мои заказы
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Мои продажи
+                                </a>
+                            </li>
+                            <li class="cabinetMenu__item">
+                                <a href="">
+                                    Просмотренные товары
+                                </a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </aside>
+            </div>
+
+            <section class="cabinet__content">
+                <!--
+                      Если дизайнер имел ввиду, что тут рили должны быть свиду чекбоксы, проще не стизизовывать радиобаттоны,
+                      а снимать галки через js? по идее, тут все равно js табы будут
+                -->
+                <div class="content__row content__checkBoxes">
+                    <div class="">
+                        <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span class="checkbox__styled"></span>
+                            <span class="checkbox__span">Физическое лицо</span>
+                        </label>
+                    </div>
+                    <div class="">
+                        <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="checkbox__styled"></span>
+                            <span class="checkbox__span">Юридическое лицо</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="content__row content__inputCont content__inputCont-2">
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Имя
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Фамилия
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__row content__inputCont" >
+                    <div class="input__cont">
+                        <div class="input__header">
+                            E-mail
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__row content__inputCont" >
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Номер телефона
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content__row content__inputCont content__inputCont-2">
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Город
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Почтовый индекс
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__row content__inputCont" >
+                    <div class="input__cont">
+                        <div class="input__header">
+                            Улица, номер дома
+                        </div>
+                        <div class="input__overflow">
+                            <input type="text" class="input__input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__row content__buttonsCont">
+                    <button class="content__button button button-provoke">
+                        Сохранить
+                    </button>
+                    <button class="content__button button button-cancel">
+                        Отмена
+                    </button>
+                </div>
+
+            </section>
+            <aside class="cabinet__rightAside">
+                <div class="cabinet__cabinetUserMenu userMenu">
+                    <div class="userMenu__leftLine"></div>
+                    <div class="userMenu__items">
+                        <div class="userMenu__item userMenu__item-active">
+                            <a href="/">Назад</a>
+                        </div>
+                        <div class="userMenu__item">
+                            <a href="#">Изменить пароль</a>
+                        </div>
+                        <div class="userMenu__item">
+                            <a href="#">Выход</a>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+    </div>
+
+
+</div>
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

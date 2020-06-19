@@ -1,0 +1,705 @@
+$formColor: #d9ecf7;
+
+
+// шрифты переобьявлены для режима локальной верстки лк с подключением css от главного сайта
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("/webfonts/Inter-Thin.woff2?v=3.13") format("woff2"), url("/webfonts/Inter-Thin.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraLight.woff2?v=3.13") format("woff2"), url("/fonts/Inter-ExtraLight.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraLightItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-ExtraLightItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Inter-Light.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Light.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Inter-LightItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-LightItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Regular.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Italic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Italic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Inter-Medium.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Medium.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Inter-MediumItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-MediumItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Inter-SemiBold.woff2?v=3.13") format("woff2"), url("/fonts/Inter-SemiBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Inter-SemiBoldItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-SemiBoldItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-Bold.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Bold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-BoldItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-BoldItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraBold.woff2?v=3.13") format("woff2"), url("/fonts/Inter-ExtraBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/Inter-ExtraBoldItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-ExtraBoldItalic.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/Inter-Black.woff2?v=3.13") format("woff2"), url("/fonts/Inter-Black.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/Inter-BlackItalic.woff2?v=3.13") format("woff2"), url("/fonts/Inter-BlackItalic.woff?v=3.13") format("woff");
+}
+
+// обьявления шрифтов END
+
+html {
+  height: auto;
+}
+
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.w100 {
+  width: 100%;
+}
+
+.h2 {
+  font-size: 36px;
+}
+
+.cabinet {
+
+  &__overflow {
+    max-width: 1540px;
+    font-size: 18px;
+    width: 100%;
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    align-items: flex-start;
+    margin: auto;
+
+
+    // отступ вниз - футер 225
+    //margin-bottom: 225px;
+    // отступ - шапка
+    margin-top: 50px;
+    //min-height: calc(100vh - 50px - 225px);
+
+    padding-bottom: 45px;
+
+
+    @media (min-width: 1541px) {
+      .h2 {
+        margin-top: 55px;
+      }
+    }
+    @media (max-width: 1540px) {
+      padding: 40px 2.5%;
+    }
+
+  }
+
+
+  &__overflow + footer {
+    //position: fixed;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    flex-shrink: 0;
+  }
+
+  &__columns {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: 1540px) {
+      margin-top: 27px;
+    }
+
+    > * {
+      @media (min-width: 1541px) {
+        padding-top: 55px;
+      }
+    }
+
+    @media (max-width: 900px){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__leftAside {
+    width: 335px;
+    min-width: 335px;
+
+    @media (max-width: 900px) {
+      order: 2;
+    }
+  }
+
+  &__rightAside {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 35px;
+    @media (max-width: 900px) {
+      order: 1;
+      margin-left: 25px;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      //display: block;
+      justify-content: center;
+      margin: 25px auto;
+    }
+  }
+
+  &__content {
+    margin-left: 40px;
+    flex-grow: 1;
+    @media (max-width: 900px) {
+      order: 3;
+      width: 100%;
+      margin-top: 25px;
+      margin-left: 0px;
+      padding: 0px 25px;
+    }
+
+
+    .cardItems__cont {
+      margin-top: 35px;
+
+      .cardItem__cont + .cardItem__cont {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__infoTable {
+    margin-top: 10px;
+    @media (max-width: 900px) {
+      margin: 10px auto;
+    }
+  }
+
+
+
+}
+
+
+.cabinetMenu {
+
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 37px;
+  }
+
+  li + li {
+    margin-top: 20px;
+  }
+
+  li, a {
+    color: black;
+    font-size: 18px;
+  }
+
+  li.cabinetMenu__item-active a {
+    color: #119BE9;
+  }
+
+  li:hover a {
+    color: #119BE9;
+  }
+
+  li:before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url(/images/icons/user_icon.svg);
+    left: 0;
+    color: #262F56;
+  }
+
+  li.cabinetMenu__item-active:before {
+    background-image: url(/images/icons/user_icon_active.svg);
+  }
+}
+
+
+.content {
+  &__checkboxCont {
+    margin-top: 30px;
+
+    @media (max-width: 900px){
+      .checkbox__label {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__checkBoxes {
+    display: flex;
+
+    > * + * {
+      margin-left: 40px;
+    }
+  }
+
+  &__row + &__row {
+    margin-top: 20px;
+  }
+
+  &__inputCont {
+    display: flex;
+
+    @media (max-width: 1200px) {
+      .input__cont {
+        width: 100% !important;
+      }
+    }
+
+
+  }
+
+  &__inputCont-2 {
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+
+
+    }
+
+    .input__cont {
+      width: 47.5%;
+    }
+
+    .input__cont + .input__cont {
+      margin-left: 5%;
+
+      @media (max-width: 1200px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__buttonsCont {
+    margin-top: 40px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content__button {
+      width: 47.5%;
+    }
+    .content__button + .content__button {
+      margin-left: 5%;
+    }
+  }
+}
+
+
+.infoTable {
+  tr {
+
+  }
+
+  td {
+
+  }
+
+  tr + tr td {
+    padding-top: 25px;
+  }
+
+  &__header {
+    color: #666666;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    //width: 45%;
+  }
+
+  &__value {
+    padding-left: 45px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+}
+
+.userMenu {
+
+  display: flex;
+
+  > div {
+    height: 100%;
+  }
+
+  &__leftLine {
+    border-left: 2px solid #CECECE;
+    width: 1px;
+  }
+
+  &__items {
+    padding-top: 5px;
+    margin-left: 25px;
+  }
+
+  &__item a {
+    color: black;
+  }
+
+  &__item:hover a {
+    color: #119BE9;
+  }
+
+  &__item-active a {
+    color: #119BE9;
+  }
+
+  &__item + &__item {
+    margin-top: 25px;
+  }
+
+
+}
+
+
+// checkbox
+.checkbox {
+
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  display: none;
+
+  &__styled {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+  }
+
+  &__styled:after {
+    content: "\2713";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -5px;
+    left: 1px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    font-weight: 700;
+    font-size: 19px;
+    transform: rotate(-7deg);
+    color: #fff;
+    opacity: 0;
+    transition: .25s;
+  }
+
+  &:checked + &__styled {
+    background-color: black;
+  }
+
+
+  &:checked + &__styled:after {
+    opacity: 1;
+  }
+
+  &__label {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__span {
+    margin-left: 17px;
+    font-size: 14px;
+    color: black;
+    user-select: none;
+  }
+}
+
+// checkbox END
+
+
+//input
+.input {
+  &__cont {
+    width: 100%;
+  }
+
+  &__header {
+    font-size: 14px;
+  }
+
+  &__overflow {
+    margin-top: 15px;
+  }
+
+  &__input {
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 18px;
+
+    &:focus {
+      border-color: #119BE9;
+    }
+  }
+}
+
+// input END
+
+
+//button
+
+.button {
+  border-radius: 100px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 5px 15px;
+  height: 60px;
+  box-sizing: border-box;
+
+  &-provoke {
+    background: #119BE9;
+    border: 1px solid #119BE9;
+    color: #FFFFFF;
+  }
+  &-cancel {
+    border: 2px solid #C4C4C4;
+    color: #C4C4C4;
+  }
+}
+
+//button END
+
+
+
+
+
+//card item
+
+.cardItem {
+
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 23px 23px;
+  border-bottom: 1px solid #C4C4C4;
+
+  &__cont {
+    display: flex;
+
+    label {
+      padding: 0 !important;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+
+  &__image {
+    width: 150px;
+    height: 130px;
+    //padding: 5px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__header {
+    margin-left: 5px;
+  }
+  &__description {
+    width: 50%;
+    margin-left: 45px;
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    .cardItem__tag {
+      margin: 3px;
+      padding: 5px !important;
+    }
+  }
+
+  &__tag {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 180%;
+    color: #FFFFFF;
+    background: #C4C4C4;
+    border-radius: 3px;
+    user-select: none;
+
+    input:checked + span {
+      color: #b40000;
+    }
+  }
+
+  &__aside {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  &__delete {
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-image: url(/images/icons/icon_delete.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    background-color: #B40000;
+    width: 35px;
+    height: 35px;
+
+  }
+
+  &__addMore {
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border: 2px solid #CECECE;
+    color: #000000;
+    border-radius: 15px;
+    height: 59px;
+    margin-top: 25px;
+    background-color: white;
+  }
+}
+
+
+
+
+
+//card item END
