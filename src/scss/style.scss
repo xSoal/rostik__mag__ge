@@ -590,6 +590,10 @@ body {
     border: 2px solid #C4C4C4;
     color: #C4C4C4;
   }
+
+  @media (max-width: 650px){
+    font-size: 20px;
+  }
 }
 
 //button END
